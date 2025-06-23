@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const { isAuthenticated } = require('../middleware/auth');
-const Order = require('../models/Order');
+const Order = require('../models/order');
 
 // Show orders of the logged-in user only
 router.get('/orders', isAuthenticated, async (req, res) => {
