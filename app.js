@@ -15,7 +15,6 @@ mongoose.connect(process.env.MONGO_URI, {
   }).catch((err)=>{
     console.log(err);
   });
- 
 
 app.use(helmet({
   contentSecurityPolicy: {
@@ -59,16 +58,22 @@ app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+if (isProduction) {
+  app.set('trust proxy', 1); // Trust Render's proxy
+}
+
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || 'fallbacksecret',
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
   cookie: {
     httpOnly: true,
-    secure: true,         // always use secure (Render uses HTTPS)
-    sameSite: 'none',     // required for cross-device (mobile) cookie support
-    maxAge: 1000 * 60 * 60 * 24
+    secure: isProduction,           // Only true on production (Render)
+    sameSite: isProduction ? 'none' : 'lax',  // Avoids blocking cookies locally
+    maxAge: 1000 * 60 * 60 * 24     // 1 day
   }
 }));
 
