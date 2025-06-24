@@ -116,6 +116,17 @@ app.use(authRoutes);
 const adminAddProductRoutes = require('./routes/adminAddProduct');
 app.use(adminAddProductRoutes);
 
+app.get('/debug', async (req, res) => {
+  try {
+    const User = require('./models/User');
+    console.log("✅ Loaded User model");
+    res.send("✅ User model loaded successfully!");
+  } catch (err) {
+    console.error("❌ User model load error:", err);
+    res.status(500).send("❌ Error loading User model. Check logs.");
+  }
+});
+
 app.use((req, res, next) => {
   res.locals.user = req.user;
   next();
