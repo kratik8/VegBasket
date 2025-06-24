@@ -65,9 +65,10 @@ app.use(session({
   saveUninitialized: false,
   store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
   cookie: {
-    httpOnly: true,           // prevents JS access
-    secure: process.env.NODE_ENV === 'production', // only over HTTPS in production
-    maxAge: 1000 * 60 * 60 * 24 // 1 day
+    httpOnly: true,
+    secure: true,         // always use secure (Render uses HTTPS)
+    sameSite: 'none',     // required for cross-device (mobile) cookie support
+    maxAge: 1000 * 60 * 60 * 24
   }
 }));
 
