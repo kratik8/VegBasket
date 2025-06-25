@@ -6,7 +6,8 @@
 
 ## 🔗 Live Demo
 
-👉 ![Visit VegBasket]((https://vegbasket-czog.onrender.com/))  
+👉 [Visit VegBasket](https://vegbasket-czog.onrender.com/)  
+_Replace with your actual deployment link_
 
 ---
 
@@ -56,5 +57,6 @@
 
 ---
 
+## 📁 Project Structure
 
 
