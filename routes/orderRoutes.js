@@ -68,6 +68,8 @@ router.post('/checkout', isAuthenticated, async (req, res) => {
 // ✅ 2. Razorpay Order Create API
 router.post('/create-order', isAuthenticated, async (req, res) => {
   console.log("🔧 /create-order route hit");
+  console.log("Session checkoutData:", req.session.checkoutData);
+
   try {
     const { total } = req.session.checkoutData;
     console.log("Checkout total:", total);
