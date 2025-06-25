@@ -14,8 +14,10 @@
 
 | User View | Admin Panel |
 |-----------|-------------|
-![Admin Dashboard](assets/admin_dashboard.png) | ![User Homepage](assets/user_home.png) | 
-![Admin Dashboard](assets/admin_dashboard.png) |
+![Admin Dashboard](assets/user.png) | ![User Homepage](assets/admin.png) | 
+![Admin Dashboard](assets/user1.png) | ![User Homepage](assets/admin1.png) | 
+![Admin Dashboard](assets/user2.png) | ![User Homepage](assets/admin2.png) | 
+![Admin Dashboard](assets/user3.png) | ![User Homepage](assets/admin3.png) | 
 
 ---
 
