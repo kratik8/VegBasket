@@ -6,7 +6,7 @@
 
 ## 🔗 Live Demo
 
-👉 [Visit VegBasket]((https://vegbasket-czog.onrender.com/))  
+👉 ![Visit VegBasket]((https://vegbasket-czog.onrender.com/))  
 
 ---
 
