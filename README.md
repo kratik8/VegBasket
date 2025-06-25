@@ -19,6 +19,8 @@
 ![Admin Dashboard](assets/user2.png) | ![User Homepage](assets/admin2.png) | 
 ![Admin Dashboard](assets/user3.png) | ![User Homepage](assets/admin3.png) | 
 
+And many more pages are in website.
+
 ---
 
 ## 🚀 Features
