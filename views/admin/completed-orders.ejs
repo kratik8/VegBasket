@@ -164,7 +164,7 @@
       <% } else { %>
         <% orders.forEach(order => { %>
           <tr>
-            <td data-label="User"><%= order.name <%= order.email %> %></td>
+            <td data-label="User"><%= order.name%> <%= order.email %> </td>
             <td data-label="Address"><%= order.address ? order.address : 'Unknown User' %></td>
             <td data-label="Items">
               <ul>
