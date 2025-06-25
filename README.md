@@ -14,7 +14,7 @@
 
 | User View | Admin Panel |
 |-----------|-------------|
-| ![User Homepage](assets/user_home.png) | ![Admin Dashboard](assets/admin_dashboard.png) |
+![Admin Dashboard](assets/admin_dashboard.png) | ![User Homepage](assets/user_home.png) | 
 
 ---
 
