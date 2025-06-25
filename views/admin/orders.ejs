@@ -98,7 +98,7 @@
 </head>
 
 <body>
-<%- include('../partials/header') %>
+<%- include('../partials/header-admin') %>
 
   <h2>All Orders</h2>
 
@@ -130,7 +130,7 @@
     <tbody>
       <% orders.forEach(order => { %>
         <tr>
-          <td data-label="User"><%= order.name %></td>
+          <td data-label="User"><%= order.name %> <%= order.email %></td>
           <td data-label="Address"><%= order.address || 'Unknown User' %></td>
           <td data-label="Items">
             <ul>

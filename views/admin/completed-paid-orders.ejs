@@ -180,7 +180,7 @@
             <tr>
               <td data-label="Order ID"><%= order._id %></td>
               <td data-label="Date"><%= new Date(order.createdAt).toLocaleString() %></td>
-              <td data-label="Name"><%= order.name %></td>
+              <td data-label="Name"><%= order.name %> <%= order.email %></td>
               <td data-label="Address"><%= order.address %></td>
               <td data-label="Total">₹<%= order.total %></td>
               <td data-label="Payment"><span class="badge bg-success"><%= order.paymentStatus %></span></td>
